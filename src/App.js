@@ -2,8 +2,10 @@ import React, { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './styles/styles.css';
 import icon from "./assets/icon.png";
-import hero from "./assets/Shorthop website hero with text.png"
+import BlueHero from "./assets/Hero Blue.png"
+import OrangeHero from "./assets/Hero Orange.png"
 import Developer from "./components/Developer"
+import ContentCreator from "./components/ContentCreator"
 
 
 const getPixels = require("get-pixels");
@@ -113,13 +115,14 @@ function App() {
   return (
     <div>
       <div className="hero">
-        <img src={hero}></img>
-        
+        <div className="hero__images">
+          <div className="hero__images--orange"></div>
+          <div className="hero__images--blue"></div>
+        </div>
       </div>
-      <div>
-        
-      </div>
-      <Developer></Developer>
+      
+      <Developer/>
+      <ContentCreator/>
     </div>
   );
 }
