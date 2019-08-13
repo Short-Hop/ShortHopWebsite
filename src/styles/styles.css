@@ -119,4 +119,44 @@
       -ms-flex-align: center;
           align-items: center;
 }
+
+.details {
+  height: 100vh;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #0f0f0f;
+}
+
+.details img {
+  margin: 5vw;
+  width: 80vw;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-transition: -webkit-box-shadow 0.5s;
+  transition: -webkit-box-shadow 0.5s;
+  transition: box-shadow 0.5s;
+  transition: box-shadow 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.details h1, .details h2, .details h3 {
+  margin: 0px;
+}
+
+.details p {
+  margin: 5vw;
+}
+
+.details a {
+  text-align: center;
+}
 /*# sourceMappingURL=styles.css.map */

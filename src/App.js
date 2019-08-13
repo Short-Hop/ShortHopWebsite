@@ -6,6 +6,7 @@ import BlueHero from "./assets/Hero Blue.png"
 import OrangeHero from "./assets/Hero Orange.png"
 import Developer from "./components/Developer"
 import ContentCreator from "./components/ContentCreator"
+import ItemDetails from './components/ItemDetails'
 
 
 const getPixels = require("get-pixels");
@@ -123,6 +124,7 @@ function App() {
       
       <Developer/>
       <ContentCreator/>
+      <ItemDetails/>
     </div>
   );
 }
