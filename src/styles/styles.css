@@ -121,7 +121,7 @@
 }
 
 .details {
-  height: 100vh;
+  min-height: 100vh;
   color: white;
   display: -webkit-box;
   display: -ms-flexbox;
