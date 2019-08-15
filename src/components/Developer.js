@@ -3,6 +3,7 @@ import PortfolioItem from './PortfolioItem';
 import photospriteImage from "../assets/photosprite thumbnail.png"
 import ShortHopImage from "../assets/Shorthop thumbnial.png"
 import devBackground from "../assets/Shorthop website web developer.png"
+import ItemDetails from "./ItemDetails"
 
 let devData = [{
     name: "ShortHop.ca",
@@ -22,12 +23,20 @@ let devData = [{
 }]
 
 function Developer() {
+
+    const [details, setdetails] = useState(<div></div>)
+
+    function handleClick(info) {
+        setdetails(<ItemDetails info={info}></ItemDetails>)
+    }
+
     return(
         <div className="developer">
+            {details}
             {/* <img src={devBackground}/> */}
             <div className="developer__item--container">
                 {devData.map((item, index) => 
-                    <PortfolioItem data={item} key={index}></PortfolioItem>
+                    <PortfolioItem info={item} key={index} handleClick={handleClick}></PortfolioItem>
                 )}  
             </div>
         </div>

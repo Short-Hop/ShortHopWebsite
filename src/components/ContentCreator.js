@@ -3,6 +3,7 @@ import PortfolioItem from './PortfolioItem';
 import LukeTherapy from "../assets/luke therapy thumbnail.jpg"
 import Escape from "../assets/Escape the School Thumbnail.jpg"
 import Trailer from "../assets/trailer thumbnail.jpg"
+import ItemDetails from "./ItemDetails"
 
 let vidData = [
     {
@@ -32,12 +33,19 @@ let vidData = [
 ]
 
 function ContentCreator() {
+
+    const [details, setdetails] = useState(<div></div>)
+
+    function handleClick(info) {
+        setdetails(<ItemDetails info={info}></ItemDetails>)
+    }
+
     return(
         <div className="creator">
             {/* <img src={devBackground}/> */}
             <div className="creator__item--container">
                 {vidData.map((item, index) => 
-                    <PortfolioItem data={item} key={index}></PortfolioItem>
+                    <PortfolioItem info={item} key={index} handleClick={handleClick}></PortfolioItem>
                 )}
                 
             </div>

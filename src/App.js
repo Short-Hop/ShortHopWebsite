@@ -124,7 +124,6 @@ function App() {
       
       <Developer/>
       <ContentCreator/>
-      <ItemDetails/>
     </div>
   );
 }
