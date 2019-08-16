@@ -13,6 +13,7 @@ let vidData = [
         description2: "I edited this entire video in Adobe After Effects and Adobe Premiere Pro.",
         description3: "",
         image: LukeTherapy,
+        url: "https://www.youtube.com/watch?v=HTNyXaXzrF0",
         id: 2
     },
     {
@@ -22,6 +23,7 @@ let vidData = [
         description2: "North Battlefield is a Esports group a friend and I started based out of Saskatchewan Canada.  We organize paid tournament events and a weekly Esports club.",
         description3: "",
         image: Trailer,
+        url: "https://www.youtube.com/watch?v=8MH997vVBsc",
         id: 3
     },
     {
@@ -31,6 +33,7 @@ let vidData = [
         description2: "I wrote, planned, shot, and edited this series over the course of two years.  I edited it in Adobe After Effects and Adobe Premiere Pro.",
         description3: "",
         image: Escape,
+        url: "https://www.youtube.com/watch?v=0ez8EjlJm7k",
         id: 4
     }
 ]

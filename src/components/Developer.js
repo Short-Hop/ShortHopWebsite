@@ -12,6 +12,7 @@ let devData = [{
     description2: "This site is built with a React.js front end and deployed using Firebase.",
     description3: "",
     image: ShortHopImage,
+    url: "",
     id: 0
 },
 {
@@ -21,6 +22,7 @@ let devData = [{
     description2: "This site was built with a React.js front end, and a Node.js back end, which handles image conversion.  The user's login session is handled using JWT authentication.  It was deployed using AWS's Elastic Beanstalk",
     description3: "",
     image: photospriteImage,
+    url: "http://photosprite.us-east-2.elasticbeanstalk.com",
     id: 1
 }]
 

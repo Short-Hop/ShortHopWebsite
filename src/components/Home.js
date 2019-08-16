@@ -15,12 +15,15 @@ function Home() {
     <div>
       <div className="hero">
         <div className="hero__images">
-            <a href="#vid">
-                <div className="hero__images--orange"></div>
-            </a>
-            <a href="#dev">
-               <div className="hero__images--blue"></div> 
-            </a>
+            
+            <div className="hero__images--orange">
+                <a href="#vid"></a>
+            </div>
+            
+            <div className="hero__images--blue">
+                <a href="#dev"></a>   
+            </div> 
+            
         </div>
       </div>
 

@@ -4,6 +4,8 @@ import photospriteImage from "../assets/photosprite thumbnail.png"
 import LukeTherapy from "../assets/luke therapy thumbnail.jpg"
 import Escape from "../assets/Escape the School Thumbnail.jpg"
 import Trailer from "../assets/trailer thumbnail.jpg"
+import backArrow from "../assets/baseline_arrow_back_ios_white_24dp.png"
+import { Link } from "react-router-dom";
 
 let data = [{
   name: "ShortHop.ca",
@@ -21,6 +23,7 @@ let data = [{
   description2: "This site was built with a React.js front end, and a Node.js back end, which handles image conversion.  The user's login session is handled using JWT authentication.  It was deployed using AWS's Elastic Beanstalk",
   description3: "",
   image: photospriteImage,
+  url: "http://photosprite.us-east-2.elasticbeanstalk.com",
   id: 1,
 
   
@@ -32,6 +35,7 @@ let data = [{
     description2: "I edited this entire video in Adobe After Effects and Adobe Premiere Pro.",
     description3: "",
     image: LukeTherapy,
+    url: "https://www.youtube.com/watch?v=HTNyXaXzrF0",
     id: 2,
 },
 {
@@ -41,6 +45,7 @@ let data = [{
     description2: "North Battlefield is a Esports group a friend and I started based out of Saskatchewan Canada.  We organize paid tournament events and a weekly Esports club.",
     description3: "",
     image: Trailer,
+    url: "https://www.youtube.com/watch?v=8MH997vVBsc",
     id: 3,
 },
 {
@@ -50,6 +55,7 @@ let data = [{
     description2: "I wrote, planned, shot, and edited this series over the course of two years.  I edited it in Adobe After Effects and Adobe Premiere Pro.",
     description3: "",
     image: Escape,
+    url: "https://www.youtube.com/watch?v=0ez8EjlJm7k",
     id: 4,
 }]
 
@@ -63,7 +69,11 @@ function ItemDetails(props) {
     
     return (
         <div className="details">
-            <a>
+            <Link className="link" to="/">
+                <img className="details__back" src={backArrow}/>
+            </Link>
+            
+            <a href={info.url}>
                 <img src={info.image}/>
                 <h1>{info.name}</h1>
             </a>
