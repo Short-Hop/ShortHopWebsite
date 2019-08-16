@@ -13,6 +13,7 @@ let vidData = [
         description2: "I edited this entire video in Adobe After Effects and Adobe Premiere Pro.",
         description3: "",
         image: LukeTherapy,
+        id: 2
     },
     {
         name: "North Battlefield Trailer",
@@ -21,6 +22,7 @@ let vidData = [
         description2: "North Battlefield is a Esports group a friend and I started based out of Saskatchewan Canada.  We organize paid tournament events and a weekly Esports club.",
         description3: "",
         image: Trailer,
+        id: 3
     },
     {
         name: "Escape the School",
@@ -29,6 +31,7 @@ let vidData = [
         description2: "I wrote, planned, shot, and edited this series over the course of two years.  I edited it in Adobe After Effects and Adobe Premiere Pro.",
         description3: "",
         image: Escape,
+        id: 4
     }
 ]
 

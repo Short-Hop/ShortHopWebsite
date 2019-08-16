@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .hero {
   width: 100vw;
   display: -webkit-box;
@@ -149,7 +153,7 @@
 }
 
 .details h1, .details h2, .details h3 {
-  margin: 0px;
+  margin: 1vw;
 }
 
 .details p {

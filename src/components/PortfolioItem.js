@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 
 function PortfolioItem(props) {
@@ -6,7 +7,10 @@ function PortfolioItem(props) {
     
     return(
         <div className="portfolio">
-            <img src={props.info.image} onClick={() => props.handleClick(props.info)}/>
+            <Link to={"/projects/" + props.info.id} >
+                <img src={props.info.image} />
+            </Link>
+            
             {/* <h2>{props.title}</h2> */}
         </div>
     )
