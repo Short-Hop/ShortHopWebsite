@@ -28,19 +28,13 @@ let devData = [{
 
 function Developer() {
 
-    const [details, setdetails] = useState(<div></div>)
-
-    function handleClick(info) {
-        setdetails(<ItemDetails info={info}></ItemDetails>)
-    }
-
     return(
         <div className="developer">
-            {details}
-            {/* <img src={devBackground}/> */}
+
+            <h1>Web Development Projects</h1>
             <div className="developer__item--container">
                 {devData.map((item, index) => 
-                    <PortfolioItem info={item} key={index} handleClick={handleClick}></PortfolioItem>
+                    <PortfolioItem info={item} key={index} ></PortfolioItem>
                 )}  
             </div>
         </div>

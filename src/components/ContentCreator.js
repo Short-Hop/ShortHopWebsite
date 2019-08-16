@@ -40,18 +40,13 @@ let vidData = [
 
 function ContentCreator() {
 
-    const [details, setdetails] = useState(<div></div>)
-
-    function handleClick(info) {
-        setdetails(<ItemDetails info={info}></ItemDetails>)
-    }
 
     return(
         <div className="creator">
-            {/* <img src={devBackground}/> */}
+            <h1>Video Production Projects</h1>
             <div className="creator__item--container">
                 {vidData.map((item, index) => 
-                    <PortfolioItem info={item} key={index} handleClick={handleClick}></PortfolioItem>
+                    <PortfolioItem info={item} key={index} ></PortfolioItem>
                 )}
                 
             </div>
