@@ -3,6 +3,7 @@ import PortfolioItem from './PortfolioItem';
 import LukeTherapy from "../assets/luke therapy thumbnail.jpg"
 import Escape from "../assets/Escape the School Thumbnail.jpg"
 import Trailer from "../assets/trailer thumbnail.jpg"
+import Tutorial from "../assets/Power Glove Thumbnail.jpg"
 import ItemDetails from "./ItemDetails"
 
 let vidData = [
@@ -34,8 +35,18 @@ let vidData = [
         description3: "",
         image: Escape,
         url: "https://www.youtube.com/watch?v=0ez8EjlJm7k",
-        id: 4
-    }
+        id: 4,
+    },
+    {
+        name: "Electric Glove Tutorial",
+        date: "Sept 2017",
+        description1: "A tutorial for creating an 'Electric Power Glove' effect in Adobe After Effects.  The tutorial includes rotoscoping, compositing, and the use of various After Effects plugins to create the effect.",
+        description2: "After following many Adobe After Effects tutorials myself, I combined the concepts I learned with my own knowledge to come up with an entirely unique effect, which was the inspiration for this tutorial.",
+        description3: "",
+        image: Tutorial,
+        url: "https://www.youtube.com/watch?v=-ser764-Byo",
+        id: 5,
+    },
 ]
 
 function ContentCreator() {
@@ -43,7 +54,7 @@ function ContentCreator() {
 
     return(
         <div className="creator">
-            <h1>Video Production Projects</h1>
+            {/* <h1>Video Production Projects</h1> */}
             <div className="creator__item--container">
                 {vidData.map((item, index) => 
                     <PortfolioItem info={item} key={index} ></PortfolioItem>

@@ -31,7 +31,7 @@ function Developer() {
     return(
         <div className="developer">
 
-            <h1>Web Development Projects</h1>
+            {/* <h1>Web Development Projects</h1> */}
             <div className="developer__item--container">
                 {devData.map((item, index) => 
                     <PortfolioItem info={item} key={index} ></PortfolioItem>

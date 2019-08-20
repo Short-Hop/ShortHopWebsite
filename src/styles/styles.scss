@@ -12,6 +12,20 @@ h1 {
     color: white;
     text-align: center;
     margin: 0px;
+    font-size: 10vw;
+}
+
+h3 {
+    font-size: 6vw
+}
+
+p {
+    font-size: 5vw;
+}
+.body {
+    background-image: url("../assets/Orange\ Blue\ background\ 4k.png");
+    background-position: center;
+    background-size: 120%
 }
 
 .hero {
@@ -42,9 +56,20 @@ h1 {
             height: 100vh;
 
             a {
-                display: block;
+                opacity: 0;
+                transition: opacity 1s;
+                display: flex;
+                align-items: center;
+                justify-content: flex-start;
                 width: 100%;
                 height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-size: 8vw;
+                    margin: 18vw;
+                    
+                }
             }
             
         }
@@ -64,12 +89,24 @@ h1 {
             &:hover {
                 clip: rect(0px, 100vw, 100vh, 30vw);
                 transition: clip 2s;
+
             }
 
             a {
-                display: block;
+                opacity: 0;
+                transition: opacity 1s;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
                 width: 100%;
                 height: 100%;
+                background-color: rgba(0, 0, 0, 0.5);
+
+                h1 {
+                    font-size: 8vw;
+                    margin: 16vw;
+                    
+                }
             }
 
         }
@@ -80,13 +117,25 @@ h1 {
         clip: rect(0px, 100vw, 100vh, 70vw);
         transition: clip 2s;
     }
+
+    
+}
+
+.nav {
+    background-color: #111111;
+    display: flex;
+
+    img {
+        width: 5vw;
+        margin: 3vw;
+    }
 }
 
 .developer {
 
     box-sizing: border-box;
     min-height: 100vh;
-    background-color: #08081f;
+    // background-color: #08081f;
     padding: 5vw;
     
     &__item--container {
@@ -99,7 +148,7 @@ h1 {
 
 .creator {
     min-height: 100vh;
-    background-color: #1f0500;
+    // background-color: #1f0500;
     padding: 5vw;
     
     &__item--container {
@@ -126,12 +175,11 @@ h1 {
         width: 80vw;
         height: auto;
         object-fit: contain;
-        box-shadow: 0px 0px 5vw #222222;
-        transition: box-shadow 0.5s;
+        transition: box-shadow 0.2s;
 
         &:hover {
-            box-shadow: 0px 0px 10vw #333333;
-            transition: box-shadow 0.5s;
+            box-shadow: 0px 0px 2vw #333333;
+            transition: box-shadow 0.2s;
         }
     }
 }
@@ -148,8 +196,8 @@ h1 {
     background-color: #0f0f0f;
 
     .details__back {
-        width: auto;
-        height: auto;
+        width: 10vw;
+        height: 10vw;
         margin: 0px
     }
 
@@ -179,15 +227,39 @@ h1 {
 }
 
 @media (min-width: 600px) {
+
+    .hero__images--orange:hover {
+        a {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    }
+
+    .hero__images--blue:hover {
+        a {
+            opacity: 1;
+            transition: opacity 1s;
+        }
+    }
+
+    h1 {
+        font-size: 7vw;
+    }
+
+    p {
+        font-size: 4vw;
+    }
+
+    h3 {
+        font-size: 5vw;
+    }
+
     .developer {
         padding: 3vw;
-        // min-height: 100vh;
         box-sizing: border-box;
         
         &__item--container {
             height: 100%;
-            flex-flow: row wrap;
-            align-items: center;
             justify-content: space-evenly;
         }
     
@@ -195,13 +267,10 @@ h1 {
     
     .creator {
         padding: 3vw;
-        // min-height: 100vh;
         box-sizing: border-box;
         
         &__item--container {
             height: 100%;
-            flex-flow: row wrap;
-            align-items: center;
             justify-content: space-evenly;
         }
     }
@@ -209,9 +278,7 @@ h1 {
     .portfolio {
         display: flex;
         justify-content: center;
-        
         width: auto;
-    
     
         h2 {
             color: white;
@@ -220,20 +287,10 @@ h1 {
     
         img {
             margin: 3vw;
-            width: 40vw;
+            width: 60vw;
             height: auto;
-            object-fit: contain;
-            box-shadow: 0px 0px 5vw #222222;
-            transition: box-shadow 0.5s;
-    
-            &:hover {
-                box-shadow: 0px 0px 10vw #333333;
-                transition: box-shadow 0.5s;
-            }
         }
     }
-    
-    
     
     .details {
         padding: 5vw;
@@ -256,13 +313,9 @@ h1 {
     
         img {
             margin-top: 3vw;
-            width: 90vw;
+            width: 70vw;
             height: auto;
-            object-fit: contain;
-            transition: box-shadow 0.5s;
         }
-        
-        
         
         h1, h2, h3 {
             margin: 0px;
@@ -270,6 +323,98 @@ h1 {
     
         p {
             margin: 5vw 0px;
+        }
+    
+        a {
+            text-align: center;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    h1 {
+        font-size: 48px;
+    }
+
+    p {
+        font-size: 36px;
+    }
+
+    h3 {
+        font-size: 24px;
+    }
+
+    .developer {
+        padding: 20px;
+        box-sizing: border-box;
+        
+        &__item--container {
+            height: 100%;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+    
+    }
+    
+    .creator {
+        padding: 3vw;
+        box-sizing: border-box;
+        
+        &__item--container {
+            height: 100%;
+            flex-flow: row wrap;
+            justify-content: space-evenly;
+        }
+    }
+    
+    .portfolio {
+        display: flex;
+        justify-content: center;
+        width: auto;
+    
+        h2 {
+            color: white;
+            margin: 0px;
+        }
+    
+        img {
+            margin: 3vw;
+            width: 550px;
+            height: auto;
+        }
+    }
+    
+    .details {
+        padding: 50px;
+        min-height: 100vh;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #0f0f0f;
+    
+        .details__back {
+            width: auto;
+            height: auto;
+            margin: 0px
+        }
+    
+        .link {
+            align-self: flex-start;
+        }
+    
+        img {
+            margin-top: 15px;
+            width: 400px;
+            height: auto;
+        }
+        
+        h1, h2, h3 {
+            margin: 0px;
+        }
+    
+        p {
+            margin: 20px 200px;
         }
     
         a {
