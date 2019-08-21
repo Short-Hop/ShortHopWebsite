@@ -12,6 +12,27 @@ import Nav from "./Nav"
 
 
 function Home() {
+
+  
+
+  function updateNavBar() {
+    let bar = document.getElementById("navbar")
+
+    if (bar && window.scrollY < (window.outerHeight-300) && window.outerWidth >= 1024) {
+      bar.className="hide"
+    } else if (bar) {
+      bar.className="show"
+    }
+  }
+
+  useEffect(() => {
+    updateNavBar();
+
+    window.addEventListener("scroll", event => {
+      updateNavBar();
+    })
+  })
+
   return (
     <div>
       <div className="hero">
@@ -32,17 +53,22 @@ function Home() {
         </div>
       </div>
 
-      <Nav/>
-
-
-      <div className="body">
-        <div id="dev">
-          <Developer/>
-        </div>
-        <div id="vid">
-          <ContentCreator/>
-        </div>
+      <div className="show" id="navbar">
+        <Nav/>
       </div>
+      
+
+      <section>
+        <div className="body">
+          <div id="dev">
+            <Developer/>
+          </div>
+          <div id="vid">
+            <ContentCreator/>
+          </div>
+        </div>
+      </section>
+      
       
     </div>
   );

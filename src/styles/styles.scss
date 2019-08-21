@@ -1,6 +1,9 @@
 html {
     scroll-behavior: smooth;
 }
+section {
+    background-color:#111111;
+}
 
 a {
     text-decoration: none;
@@ -29,7 +32,7 @@ p {
 }
 
 .hero {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     
@@ -43,16 +46,17 @@ p {
     &__images {
         // display: flex;
         position: relative;
+        width: 100%;
 
         
 
         &--orange {
             position: relative;
-            z-index: 0;
+            z-index: 1;
             background-image: url("../assets/Hero Orange.png"); 
             background-position: center;
             background-size: cover;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
 
             a {
@@ -76,11 +80,11 @@ p {
 
         &--blue {
             position: absolute;
-            z-index: 1;
+            z-index: 2;
             background-image: url("../assets/Hero Blue.png");
             background-position: center;
             background-size: cover;
-            width: 100vw;
+            width: 100%;
             height: 100vh;
             top: 0px;
             clip: rect(0px, 100vw, 100vh, 50vw);
@@ -124,12 +128,18 @@ p {
 .nav {
     background-color: #111111;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 3vw 0px;
 
     img {
+        cursor: pointer;
         width: 5vw;
-        margin: 3vw;
+        height: auto;
     }
 }
+
 
 .developer {
 
@@ -345,8 +355,7 @@ p {
     }
 
     .developer {
-        padding: 20px;
-        box-sizing: border-box;
+        padding: 0px;
         
         &__item--container {
             height: 100%;
@@ -354,16 +363,25 @@ p {
             justify-content: space-evenly;
         }
     
+        .portfolio {
+            img {
+                margin-top: calc((100vh - 550px)/2);
+            }
+        }
     }
     
     .creator {
-        padding: 3vw;
-        box-sizing: border-box;
+        padding: 0px;
         
         &__item--container {
             height: 100%;
             flex-flow: row wrap;
             justify-content: space-evenly;
+        }
+        .portfolio {
+            img {
+                margin: calc((100vh - 618px)/4);
+            }
         }
     }
     
@@ -377,8 +395,7 @@ p {
             margin: 0px;
         }
     
-        img {
-            margin: 3vw;
+        img {    
             width: 550px;
             height: auto;
         }
@@ -420,6 +437,36 @@ p {
         a {
             text-align: center;
         }
+    }
+
+    .show {
+        opacity: 1;
+        transition: opacity 1s
+    }
+
+    .hide {
+        opacity: 0;
+        transition: opacity 1s
+    }
+
+
+    .nav {
+        padding: 0px 20px;
+        position: fixed;
+        top: 0px;
+        width: auto;
+        height: 100vh;
+        flex-direction: column;
+    
+        img {
+            cursor: pointer;
+            width: 30px;
+            height: auto;
+        }
+    }
+
+    .body {
+        margin-left: 70px
     }
 
 }
