@@ -1,8 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter, Route, Link } from "react-router-dom";
-import icon from "../assets/icon.png";
-import BlueHero from "../assets/Hero Blue.png"
-import OrangeHero from "../assets/Hero Orange.png"
 import Developer from "./Developer"
 import ContentCreator from "./ContentCreator"
 import Nav from "./Nav"
