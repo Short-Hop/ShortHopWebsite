@@ -1,0 +1,12 @@
+<div class="albums">
+    @for (album of albums; track album) {
+    <div class="album">
+        <a [href]="album.dittoURL"><img [src]="album.imageURL" alt="{{ album.name }}" class="album-cover" /></a>
+        <h2 class="album-title">{{ album.name }}</h2>
+        <div class="links">
+            <a [href]="album.bandcampURL"><img matTooltip="View on Bandcamp" class="icon" src="/bandcamp.svg"/></a>
+            <a [href]="album.dittoURL"><mat-icon matTooltip="View on streaming platforms" class="icon" src="/spotify.svg">music_note</mat-icon></a>
+        </div>
+    </div>
+    }
+</div>
